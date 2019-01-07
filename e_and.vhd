@@ -19,4 +19,4 @@ begin
 
   o <= a and b;
 
-  end hardware;
+end hardware;

@@ -1,9 +1,9 @@
 -- Author: Edison Neto
 -- Date: Jan 2019
 
-library IEEE;
+library ieee;
 
-use IEEE.std_logic_1164.all;
+use ieee.std_logic_1164.all;
 
 entity e_and is
   port

@@ -23,12 +23,12 @@ begin
     q => output(0),
     qbar => output(1)
     );
-  stim_proc: process
+  test_proc: process
   begin
-    input <= "00"; wait for 10 ns; assert output = "01" report "D=0,CLK=0";
-    input <= "01"; wait for 10 ns; assert output = "01" report "D=0,CLK=1";
-    input <= "10"; wait for 10 ns; assert output = "01" report "D=1,CLK=0";
-    input <= "11"; wait for 10 ns; assert output = "10" report "D=1,CLK=1";
+    input <= "00"; wait for 10 ns; assert output = "10" report "D=0, CLK=0";
+    input <= "01"; wait for 10 ns; assert output = "10" report "D=1, CLK=0";
+    input <= "10"; wait for 10 ns; assert output = "10" report "D=0, CLK=1";
+    input <= "11"; wait for 10 ns; assert output = "01" report "D=1, CLK=1";
     report "D Flip Flop testbench finished";
     wait;
   end process;

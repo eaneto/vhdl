@@ -22,8 +22,8 @@ architecture run of dlatch is
 begin
   A <= d nand clk;
   B <= not d nand clk;
-  temp_q <= (set_bar nand A) nand temp_q;
-  temp_q_bar <= not((set_bar nand B) nand temp_q);
+  temp_q <= (set_bar nand A) nand temp_q_bar;
+  temp_q_bar <= (reset_bar nand B) nand temp_q;
   q <= temp_q;
   q_bar <= temp_q_bar;
 end run;
